@@ -1,16 +1,14 @@
-import java.util.regex.Pattern;
-
 public class Passwort {
     public static void main(String[] args) {
         welcome();
         rules();
         String ergebnis= zeichenanzahl("abcdef");
         System.out.println(ergebnis);
-        String hatZahl = zahlenthalten("test5test");
+        String hatZahl = zahlenthalten("testtest5");
         System.out.println(hatZahl);
-        String hatkleinenBuchstaben = kleinerBuchstabeenthalten("Muenster");
+        String hatkleinenBuchstaben = kleinerBuchstabeenthalten("HALLO");
         System.out.println(hatkleinenBuchstaben);
-        String hatgroßenBuchstaben = großerBuchstabeenthalten("TestTest");
+        String hatgroßenBuchstaben = großerBuchstabeenthalten("hallo");
         System.out.println(hatgroßenBuchstaben);
     }
 

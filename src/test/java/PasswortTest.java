@@ -46,4 +46,48 @@ class PasswortTest {
         assertEquals("Zahl nicht enthalten", result);
 
     }
+
+    @Test
+    public void ifcontainlowercase() {
+// GIVEN
+        String input = "abcdef";
+// WHEN
+        String result = Passwort.kleinerBuchstabeenthalten(input);
+// THEN
+        assertEquals("kleiner Buchstabe enthalten", result);
+
+    }
+
+    @Test
+    public void ifnotcontainlowercase() {
+// GIVEN
+        String input = "ABCDE";
+// WHEN
+        String result = Passwort.kleinerBuchstabeenthalten(input);
+// THEN
+        assertEquals("kleiner Buchstabe nicht enthalten", result);
+
+    }
+
+    @Test
+    public void ifcontainuppercase() {
+// GIVEN
+        String input = "ABCDE";
+// WHEN
+        String result = Passwort.großerBuchstabeenthalten(input);
+// THEN
+        assertEquals("großer Buchstabe enthalten", result);
+
+    }
+
+    @Test
+    public void ifnotcontainuppercase() {
+// GIVEN
+        String input = "abcde";
+// WHEN
+        String result = Passwort.großerBuchstabeenthalten(input);
+// THEN
+        assertEquals("großer Buchstabe nicht enthalten", result);
+
+    }
 }
