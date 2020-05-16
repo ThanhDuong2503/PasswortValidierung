@@ -2,17 +2,18 @@ public class Passwort {
     public static void main(String[] args) {
         welcome();
         rules();
-        String ergebnis= zeichenanzahl("abcdef");
+        String ergebnis= hasMinLenght("abcd");
         System.out.println(ergebnis);
-        String hatZahl = zahlenthalten("testtest5");
+        String hatZahl = hasNumber("testtest");
         System.out.println(hatZahl);
-        String hatkleinenBuchstaben = kleinerBuchstabeenthalten("HALLO");
+        String hatkleinenBuchstaben = hasLowerCase("HaLLO");
         System.out.println(hatkleinenBuchstaben);
-        String hatgroßenBuchstaben = großerBuchstabeenthalten("hallo");
+        String hatgroßenBuchstaben = hasUpperCase("Hallo");
         System.out.println(hatgroßenBuchstaben);
     }
 
     public static void welcome() {
+
         System.out.println("Bitte geb dein Passwort ein");
     }
 
@@ -20,7 +21,7 @@ public class Passwort {
         System.out.println("Das Passwort darf 5-10 Zeichen haben und musst mind. 1 Zahl enthalten");
     }
 
-    public static String zeichenanzahl(String input) {
+    public static String hasMinLenght (String input) {
         if (input.length() < 5 || input.length() > 10) {
             return "Passwortlänge inkorrekt";
         } else {
@@ -28,7 +29,7 @@ public class Passwort {
         }
     }
 
-    public static String zahlenthalten(String input) {
+    public static String hasNumber(String input) {
         String regex = "(.*[0-9].*)";
         if (input.matches(regex)) {
             return "Zahl enthalten";
@@ -36,7 +37,7 @@ public class Passwort {
             return "Zahl nicht enthalten";
         }
     }
-    public static String kleinerBuchstabeenthalten(String input){
+    public static String hasLowerCase(String input){
         String regex = "(.*[a-z].*)";
         if (input.matches(regex)) {
             return "kleiner Buchstabe enthalten";
@@ -45,7 +46,7 @@ public class Passwort {
         }
     }
 
-    public static String großerBuchstabeenthalten(String input){
+    public static String hasUpperCase(String input){
         String regex = "(.*[A-Z].*)";
         if (input.matches(regex)) {
             return "großer Buchstabe enthalten";
