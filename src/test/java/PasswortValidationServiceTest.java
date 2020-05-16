@@ -3,13 +3,13 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 
-class PasswortTest {
+class PasswortValidationServiceTest {
     @Test
     public void iflengthiskorrect() {
 // GIVEN
         String input = "123456";
 // WHEN
-        String result = Passwort.hasMinLenght(input);
+        String result = PasswortValidationService.hasMinLenght(input);
 // THEN
         assertEquals("Passwortlänge korrekt", result);
 
@@ -19,7 +19,7 @@ class PasswortTest {
 // GIVEN
         String input = "1234";
 // WHEN
-        String result = Passwort.hasMinLenght(input);
+        String result = PasswortValidationService.hasMinLenght(input);
 // THEN
         assertEquals("Passwortlänge inkorrekt", result);
 
@@ -30,7 +30,7 @@ class PasswortTest {
 // GIVEN
         String input = "abcd4";
 // WHEN
-        String result = Passwort.hasNumber(input);
+        String result = PasswortValidationService.hasNumber(input);
 // THEN
         assertEquals("Zahl enthalten", result);
 
@@ -41,7 +41,7 @@ class PasswortTest {
 // GIVEN
         String input = "abcdef";
 // WHEN
-        String result = Passwort.hasNumber(input);
+        String result = PasswortValidationService.hasNumber(input);
 // THEN
         assertEquals("Zahl nicht enthalten", result);
 
@@ -52,7 +52,7 @@ class PasswortTest {
 // GIVEN
         String input = "abcdef";
 // WHEN
-        String result = Passwort.hasLowerCase(input);
+        String result = PasswortValidationService.hasLowerCase(input);
 // THEN
         assertEquals("kleiner Buchstabe enthalten", result);
 
@@ -63,7 +63,7 @@ class PasswortTest {
 // GIVEN
         String input = "ABCDE";
 // WHEN
-        String result = Passwort.hasLowerCase(input);
+        String result = PasswortValidationService.hasLowerCase(input);
 // THEN
         assertEquals("kleiner Buchstabe nicht enthalten", result);
 
@@ -74,7 +74,7 @@ class PasswortTest {
 // GIVEN
         String input = "ABCDE";
 // WHEN
-        String result = Passwort.hasUpperCase(input);
+        String result = PasswortValidationService.hasUpperCase(input);
 // THEN
         assertEquals("großer Buchstabe enthalten", result);
 
@@ -85,7 +85,7 @@ class PasswortTest {
 // GIVEN
         String input = "abcde";
 // WHEN
-        String result = Passwort.hasUpperCase(input);
+        String result = PasswortValidationService.hasUpperCase(input);
 // THEN
         assertEquals("großer Buchstabe nicht enthalten", result);
 

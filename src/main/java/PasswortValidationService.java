@@ -1,14 +1,14 @@
-public class Passwort {
+public class PasswortValidationService {
     public static void main(String[] args) {
         welcome();
         rules();
-        String ergebnis= hasMinLenght("abcd");
+        String ergebnis= hasMinLenght("abcdef");
         System.out.println(ergebnis);
-        String hatZahl = hasNumber("testtest");
+        String hatZahl = hasNumber("testtest55");
         System.out.println(hatZahl);
-        String hatkleinenBuchstaben = hasLowerCase("HaLLO");
+        String hatkleinenBuchstaben = hasLowerCase("HALLO");
         System.out.println(hatkleinenBuchstaben);
-        String hatgroßenBuchstaben = hasUpperCase("Hallo");
+        String hatgroßenBuchstaben = hasUpperCase("hallo");
         System.out.println(hatgroßenBuchstaben);
     }
 
